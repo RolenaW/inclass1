@@ -78,10 +78,19 @@ class __TabsNonScrollableDemoState extends State<_TabsNonScrollableDemo>
           ],
         ),
       ),
+      //Adding bottom app bar
+      bottomNavigationBar: BottomAppBar(
+        child: Padding(
+          padding: EdgeInsets.all(12),
+          child: Text( 
+          'Bottom App Bar',
+          ),
+        ),
+      ),
       body: TabBarView(
         controller: _tabController,
         children: [
-          // TAB 1
+          // tab 1
           Center(
             child: Column(
               children: [
@@ -104,7 +113,7 @@ class __TabsNonScrollableDemoState extends State<_TabsNonScrollableDemo>
             ),
           ),
 
-          // TAB 2
+          // tab 2
           Center(
             child: Column(
               children: [
@@ -118,7 +127,7 @@ class __TabsNonScrollableDemoState extends State<_TabsNonScrollableDemo>
             ),
           ),
 
-          // TAB 3
+          // tab 3
           Center(
             child: ElevatedButton(
               onPressed: () {
@@ -132,7 +141,7 @@ class __TabsNonScrollableDemoState extends State<_TabsNonScrollableDemo>
             ),
           ),
 
-          // TAB 4
+          // tab 4
           ListView(
             children: [
               Card(child: ListTile(title: Text('Item 1'))),
